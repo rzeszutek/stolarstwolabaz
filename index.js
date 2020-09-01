@@ -33,7 +33,7 @@ app.use('/', express.static(path.join(__dirname, 'public/dist/client')));
 //app.use('/api', route);
 
 //server test
-app.get('/*', (req, res) => res.sendFile(path.join(__dirname)));
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname + 'public/dist/client/index.html')));
 
 app.listen(port, () => {
     console.log('Server working at port: ' + port)

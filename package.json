@@ -4,18 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "ng": "ng",
+    "build": "ng build",
+    "e2e": "ng e2e",
     "test": "echo \"Error: no test specified\" && exit 1",
     "run app": ".\node_modules\bin\nodemon app",
-    "start": "node ./index.js"
+    "start": "node index.js",
+    "postinstall": "ng build --aot -prod"
   },
   "author": "Rafał Rzeszutek",
   "license": "ISC",
   "dependencies": {
-    "@angular/cli": "^10.0.8",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.1",
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "6.11.0",
+    "npm": "3.10.10"
+  },
+  "devDependencies": {
+    "@angular/cli": "^10.0.8",
+    "@angular/compiler-cli": "^10.0.14",
+    "enhanced-resolve": "^3.3.0",
+    "ts-node": "~3.2.0",
+    "tslint": "~5.7.0",
+    "typescript": "~2.3.3"
   }
 }
